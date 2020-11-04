@@ -7,17 +7,18 @@ public class Cola {
     
     int i = 0;
     public void insertar(){
-        try {
-            do {
+        if(colaList.size() == cola.length){
+            JOptionPane.showMessageDialog(null,
+                    "No puede ingresar mas datos", "Error", JOptionPane.WARNING_MESSAGE);
+        } else {
+            while (i < cola.length){
                 String elem = JOptionPane.showInputDialog(null,
-                        "Dato: ");
+                        "Ingrese elemento: ");
                 cola[i] = elem;
                 colaList.push(cola[i]);
-                i = i +1;
+                i++;
                 break;
-            } while (i < cola.length + 1);
-        } catch (ArrayIndexOutOfBoundsException e){
-            JOptionPane.showMessageDialog(null, "Limite alcanzado");
+            }
         }
     }
 
