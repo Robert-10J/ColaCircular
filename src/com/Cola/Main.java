@@ -11,7 +11,7 @@ public class Main {
                         + "1. Insertar\n"
                         + "2. Eliminar\n"
                         + "3. Mostrar todos los elementos\n"
-                        + "4. Consultar primer elemento\n"
+                        + "4. Consultar el frente\n"
                         + "5. Estado de la cola\n"
                         + "6. Salir"));
 
@@ -42,6 +42,5 @@ public class Main {
                         "Ingrese una opcion correcta", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }while(opcion != 6);
-
     }
 }

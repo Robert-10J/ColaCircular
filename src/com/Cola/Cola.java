@@ -23,15 +23,26 @@ public class Cola {
     }
 
     public void eliminar(){
-        Object element = colaList.remove(0);
-        JOptionPane.showMessageDialog(null,
-                "Se elimino el elemento " + element);
+        if(colaList == null || colaList.isEmpty()){
+            JOptionPane.showMessageDialog(null,
+                    "Ingrese datos a la cola", "No hay datos", JOptionPane.ERROR_MESSAGE);
+        } else {
+            Object element = colaList.remove(0);
+            JOptionPane.showMessageDialog(null,
+                    "Se elimino el elemento " + element);
+            i--;
+        }
     }
 
     public void primerElemento(){
-        Object primer = colaList.get(0);
-        JOptionPane.showMessageDialog(null,
-                "El frente es " + primer);
+        if(colaList == null || colaList.isEmpty()){
+            JOptionPane.showMessageDialog(null,
+                    "Ingrese datos a la cola", "No hay datos", JOptionPane.ERROR_MESSAGE);
+        } else {
+            Object primer = colaList.get(0);
+            JOptionPane.showMessageDialog(null,
+                    "El frente es " + primer);
+        }
     }
 
     public void mostrar(){
